@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const PostsRouter = require('./data/routers/postsRouter.js')
 const UsersRouter = require('./data/routers/usersRouter.js')
@@ -13,12 +14,12 @@ function userCaps(req, res, next) {
     ).join` `
   next()
 }
-const PORT = 8888
+const PORT = process.env.PORT || 4000
 
 server.get('/', (req, res) => {
   res.send(`<h2>Welcome to the API</h2>`)
 })
 
 server.listen(PORT, _ => {
-  console.log(`SERVER RUNNING ON http://localhost:${PORT}`)
+  console.log(`SERVER RUNNING ON PORT ${PORT}`)
 })
