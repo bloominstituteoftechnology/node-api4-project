@@ -14,7 +14,7 @@ function userCaps(req, res, next) {
     ).join` `
   next()
 }
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 8888
 
 server.get('/', (req, res) => {
   res.send(`<h2>Welcome to the API</h2>`)
