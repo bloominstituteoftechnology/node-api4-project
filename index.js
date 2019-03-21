@@ -20,6 +20,8 @@ server.use(helmet());
 server.use("/api/users", userController);
 server.use("/api/posts", postContoller);
 
-server.listen(3001, () => {
-	console.log(`Server now running on http://localhost:3001`);
+const port = process.env.PORT;
+
+server.listen(port, () => {
+	console.log(`Server now running on http://localhost:${port}`);
 });
