@@ -17,11 +17,11 @@ server.use(cors());
 server.use(helmet());
 
 // route handlers
+server.use("/api/users", userController);
+server.use("/api/posts", postContoller);
 server.use("/", (req, res) =>
 	res.status(200).json({ message: "Sanity check" })
 );
-server.use("/api/users", userController);
-server.use("/api/posts", postContoller);
 
 const port = process.env.PORT;
 
