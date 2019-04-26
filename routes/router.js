@@ -8,7 +8,10 @@ router.get('/', (req, res) => {
    db 
    .find()
    .then(posts => {
-       res.json(posts)
+       res.json({
+           messageOfTheDay: process.env.MOTD,
+           posts
+        })
    })
    .catch(err => {
        res.status(500).json({ error: "The posts information could not be retrieved." })
