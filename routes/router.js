@@ -27,8 +27,8 @@ router.get('/:id', (req, res) => {
     })
     .catch(error => {
         res.status(500).json({ error: "The post information could not be retrieved." })
-    })
-})
+    });
+});
 
 router.post('/', (req, res) => {
      const newPost = req.body;
