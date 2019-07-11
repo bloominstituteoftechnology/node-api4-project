@@ -8,7 +8,7 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
 
 ## Minimum Viable Product
 
-Pick any API, could be one of your past projects, and deploy it to `heroku`. Once deployed, send the URL to the PM for your group.
+Pick any API, could be one of your past projects, and deploy it to `heroku`. Once deployed, send the URL to the TL for your group.
 
 ## Stretch Goal
 
