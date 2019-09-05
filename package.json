@@ -1,0 +1,24 @@
+{
+  "name": "webapi-iv-challenge",
+  "version": "1.0.0",
+  "description": "In this challenge, you will **deploy** an API of your choosing to `heroku`.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lavonmejia/webapi-iv-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lavonmejia/webapi-iv-challenge/issues"
+  },
+  "homepage": "https://github.com/lavonmejia/webapi-iv-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
