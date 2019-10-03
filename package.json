@@ -1,0 +1,27 @@
+{
+  "name": "webapi-iv-challenge",
+  "version": "1.0.0",
+  "description": "In this challenge, you will **deploy** an API of your choosing to `heroku`.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshimii/webapi-iv-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshimii/webapi-iv-challenge/issues"
+  },
+  "homepage": "https://github.com/yoshimii/webapi-iv-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
