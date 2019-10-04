@@ -25,6 +25,7 @@
     "sqlite3": "^4.1.0"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^1.19.3"
   }
 }
