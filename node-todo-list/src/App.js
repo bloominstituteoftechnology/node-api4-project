@@ -14,8 +14,8 @@ function App() {
 
   useEffect(() => {
     if (isEditing) return
-    axios
-      .get("https://ez-pz-app.herokuapp.com/api/todos")
+    axios.get("https://ez-pz-app.herokuapp.com/api/todos")
+    // axios.get("http:localhost:5000/api/todos")
       .then(todos => {
         setTodos(todos)
       })
@@ -24,7 +24,7 @@ function App() {
   
   const handleSubmit = e => {
     e.preventDefault()
-    axios.post("https://ez-pz-app.herokuapp.com/api/todos", newTodo)
+    axiosWithCors.post("https://ez-pz-app.herokuapp.com/api/todos", newTodo)
   }
 
   const handleChanges = e => {
