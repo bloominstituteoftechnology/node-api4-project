@@ -46,11 +46,11 @@ router.put('/:id', (req, res) => {
         })
     })
 
-    const [err, [oldTodo]] = await withCatch(Todos.findById(id))
-    const [err2, updatedTodo] = await withCatch(Todos.update(id, todoItem))
-    if (err) res.status(500).json({error: "Error while finding the specified todo"})
-    if (err2) res.status(500).json({error: "Error while updating your todo item"})
-    res.status(200).json({updatedTo: updatedTodo, was: oldTodo})
+    // const [err, [oldTodo]] = await withCatch(Todos.findById(id))
+    // const [err2, updatedTodo] = await withCatch(Todos.update(id, todoItem))
+    // if (err) res.status(500).json({error: "Error while finding the specified todo"})
+    // if (err2) res.status(500).json({error: "Error while updating your todo item"})
+    // res.status(200).json({updatedTo: updatedTodo, was: oldTodo})
 })
 
 function withCatch(promise) {
