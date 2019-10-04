@@ -6,25 +6,32 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [isEditing, setIsEditing] = useState(false)
   const [newTodo, setNewTodo] = useState({
     task: '',
     completed: ''
   })
+  const [fetching, setFetching] = useState(false)
 
   useEffect(() => {
-    if (isEditing) return
-    axios.get("https://ez-pz-app.herokuapp.com/api/todos")
-    // axios.get("http:localhost:5000/api/todos")
-      .then(todos => {
-        setTodos(todos)
-      })
-      .catch(console.error)
-  }, [todos, isEditing])
+    // axios.get("https://ez-pz-app.herokuapp.com/api/todos")
+    axios.get("http://localhost:5000/api/todos")
+    .then(todos => {
+      console.log({todos})
+      setTodos(todos.data)
+    })
+    .catch(console.error)
+  }, [fetching])
   
   const handleSubmit = e => {
+    setFetching(true)
     e.preventDefault()
-    axiosWithCors.post("https://ez-pz-app.herokuapp.com/api/todos", newTodo)
+    // axios.post("https://ez-pz-app.herokuapp.com/api/todos", newTodo)
+    axios.post("http://localhost:5000/api/todos", newTodo)
+    .then(_ => setFetching(false))
+    .catch(err => {
+      setFetching(false)
+      console.error(err)
+    })
   }
 
   const handleChanges = e => {
@@ -43,7 +50,7 @@ function App() {
         <button type="submit">Add</button>
       </form>
       {todos.map(todo => (
-        <TodoItem todo={todo} isEditing={isEditing} setIsEditing={setIsEditing} />
+        <TodoItem todo={todo} fetching={fetching} setFetching={setFetching} />
       ))}
     </div>
   );

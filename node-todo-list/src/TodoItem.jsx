@@ -1,15 +1,23 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios'
 
-export default function TodoItem({todo, isEditing, setIsEditing}) {
+export default function TodoItem({todo, fetching, setFetching}) {
     const [updatedTodo, setUpdatedTodo] = useState({
         task: '',
         completed: false
     })
+    const [isEditing, setIsEditing] = useState(false)
+
     const handleCompleted = e => {
+        setFetching(true)
         axios
-            .put(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`, {...todo, completed: !todo.completed})        
-            .catch(console.error)
+            // .put(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`, {...todo, completed: !todo.completed})        
+            .put(`http://localhost:5000/api/todos/${todo.id}`, {...todo, completed: !todo.completed})        
+            .then(_ => setFetching(false))
+            .catch(err => {
+                setFetching(false)
+                console.error(err)
+            })
     }
 
     const handleEdit = e => {
@@ -17,9 +25,15 @@ export default function TodoItem({todo, isEditing, setIsEditing}) {
     }
 
     const handleDelete = e => {
+        setFetching(true)
         axios
-            .delete(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`)
-            .catch(console.error)
+            // .delete(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`)
+            .delete(`http://localhost:5000/api/todos/${todo.id}`)
+            .then(() => setFetching(false))
+            .catch(err => {
+                setFetching(false)
+                console.error(err)
+            })
     }
 
     const handleChanges = e => {
@@ -31,10 +45,16 @@ export default function TodoItem({todo, isEditing, setIsEditing}) {
     }
 
     const handleSubmit = e => {
+        setFetching(true)
         e.preventDefault()
         axios
-            .put(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`, updatedTodo )
-            .catch(console.error)
+            // .put(`https://ez-pz-app.herokuapp.com/api/todos/${todo.id}`, updatedTodo )
+            .put(`http://localhost:5000/api/todos/${todo.id}`, updatedTodo)
+            .then(() => setFetching(false))
+            .catch(err => {
+                console.error(err)
+                setFetching(false)
+            })
         setIsEditing(false)
     }
     
