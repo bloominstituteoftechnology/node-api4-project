@@ -11,15 +11,15 @@ server.get('/', (req, res) => {
     },
     {
         "id": 1,
-        "movie": "The Godfather"
+        "movie": "The Godfather Part 2"
     },
     {
         "id": 1,
-        "movie": "The Godfather"
+        "movie": "Stranger Than Fiction"
     },
     {
         "id": 1,
-        "movie": "The Godfather"
+        "movie": "Dr. Strangelove"
     },
 
 ];
