@@ -16,10 +16,10 @@ Pick any API, could be one of your past projects, and deploy it to `heroku`. Onc
 
 ## Node Project 2 API
 
-Base URL: https://rf-node-project2.herokuapp.com/
+Base URL: `https://rf-node-project2.herokuapp.com/`
 
 
-POST to /api/posts
+POST to `/api/posts`
 
 Takes an object that includes:
 
@@ -31,7 +31,7 @@ Takes an object that includes:
 ```
 
 
-POST to /api/posts/:id/comments
+POST to `/api/posts/:id/comments`
 
 Take an object that includes:
 
@@ -42,6 +42,33 @@ Take an object that includes:
 }
 ```
 
+
+GET to `/api/posts`
+Returns your created posts.
+
+Example Output:
+
+```
+[
+    {
+        "id": 1,
+        "title": "I wish the ring had never come to me. I wish none of this had happened.",
+        "contents": "Guess who said this",
+        "created_at": "2019-05-11 01:55:52",
+        "updated_at": "2019-05-11 01:55:52"
+    },
+    {
+        "id": 2,
+        "title": "I think we should get off the road. Get off the road! Quick!",
+        "contents": "Guess who said this",
+        "created_at": "2019-05-11 01:55:52",
+        "updated_at": "2019-05-11 01:55:52"
+    }
+]
+```
+
+
+GET to `/api/posts/:id`
 
 Example Output:
 
@@ -55,3 +82,36 @@ Example Output:
 }
 ```
 
+
+GET to `/api/posts/:id/comments`
+
+Example Output:
+
+```
+[
+    {
+        "id": 20,
+        "text": "My new Car",
+        "created_at": "2020-03-14 22:09:24",
+        "updated_at": "2020-03-14 22:09:24",
+        "post_id": 16,
+        "post": "Honda"
+    },
+    {
+        "id": 21,
+        "text": "My new Car",
+        "created_at": "2020-03-14 22:11:06",
+        "updated_at": "2020-03-14 22:11:06",
+        "post_id": 16,
+        "post": "Honda"
+    },
+]
+```
+
+PUT to `/api/posts/:id`
+
+Takes an object to be updated from the server.
+
+DELETE to `/api/posts/:id`
+
+Takes an object to be deleted from the server.
