@@ -1,4 +1,5 @@
 // code away!
+require('dotenv').config()
 const server = require('./server.js');
 const port_number = process.env.PORT || 4000;
 
