@@ -13,3 +13,45 @@ Pick any API, could be one of your past projects, and deploy it to `heroku`. Onc
 ## Stretch Goal
 
 - add support for environment variables using `.env` files. You can use the [dotenv](https://www.npmjs.com/package/dotenv) npm module.
+
+## Node Project 2 API
+
+Base URL: https://rf-node-project2.herokuapp.com/
+
+
+POST to /api/posts
+
+Takes an object that includes:
+
+```
+{
+    "title": "burger",
+    "contents": "cheese"
+}
+```
+
+
+POST to /api/posts/:id/comments
+
+Take an object that includes:
+
+```
+{
+    "text": "Final Comment",
+	"post_id": 18, this integer should be grabbed from the :id
+}
+```
+
+
+Example Output:
+
+```
+{
+    "id": 1,
+    "title": "I wish the ring had never come to me. I wish none of this had happened.",
+    "contents": "Guess who said this",
+    "created_at": "2019-05-11 01:55:52",
+    "updated_at": "2019-05-11 01:55:52"
+}
+```
+
