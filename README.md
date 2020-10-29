@@ -8,7 +8,7 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
 
 ### Task 1: Minimum Viable Product
 
-Pick any API, could be one of your past projects, and deploy it to `heroku`.
+Pick any API, could be one of your pa st projects, and deploy it to `heroku`.
 
 ### Task 2: Stretch Goal
 
