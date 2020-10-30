@@ -1,12 +1,12 @@
-const express = require('express')
+require('dotenv').config()
+const server = require('./server')
 
-const server = express(); 
+const port = process.env.PORT ;
+const secret = process.env.SECRET_THING ;
+console.log(port,secret);
 
-server.use(express.json());
-
-server.get('/', (req, res, next) =>{
-    res.status(200).json({ api: 'heroku deployment' })
-    next();
-})
+server.listen(port, () => {
+    console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
+  });
 
 module.exports = server;
