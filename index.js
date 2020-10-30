@@ -3,6 +3,7 @@ const server = require('./server')
 
 const port = process.env.PORT ;
 const secret = process.env.SECRET_THING ;
+
 console.log(port,secret);
 
 server.listen(port, () => {
