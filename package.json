@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbu0413/node-api4-project.git",
-    "heroku-postbuild": "cd client && npm i && npm run build"
+    "url": "git+https://github.com/lbu0413/node-api4-project.git"
+   
   },
   "keywords": [],
   "author": "",
