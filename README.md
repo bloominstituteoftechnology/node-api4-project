@@ -1,4 +1,4 @@
-# Node Deployment Module Project
+# Deployment and Best Practices
 
 In this challenge, you will **deploy** an API of your choosing to `heroku`.
 
