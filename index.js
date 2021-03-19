@@ -8,7 +8,7 @@ const path = require("path")
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname,"cient/build","index.html")) )
+app.use(express.static(path.join(__dirname,"cient/build")))
 
 app.use("/api/*",(_,res) =>{
     res.json({data: "The api lives, it lives I tell you!!!"})
