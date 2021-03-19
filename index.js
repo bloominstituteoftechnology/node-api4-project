@@ -14,6 +14,10 @@ app.use("/api/*",(_,res) =>{
     res.json({data: "The api lives, it lives I tell you!!!"})
 })
 
+app.use('*', (_,res) =>{
+    res.sendFile(path.join(__dirname, 'client/build','index.html'))
+})
+
 app.listen(port, () =>{
     console.log(`server is alive on port ${port}`)
 })
