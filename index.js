@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname,"cient/build","index.html")) )
 
 app.use("/api/*",(_,res) =>{
-    res.json({data: "The api lives, it lives I tell you!!"})
+    res.json({data: "The api lives, it lives I tell you!!!"})
 })
 
 app.listen(port, () =>{
