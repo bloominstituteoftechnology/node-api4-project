@@ -15,7 +15,7 @@ app.use("/api/*",(_,res) =>{
 })
 
 app.use('*', (_,res) =>{
-    res.sendFile(path.join(__dirname, 'client/build','index.html'))
+    res.sendFile(path.join(__dirname, 'cient/build','index.html'))
 })
 
 app.listen(port, () =>{
