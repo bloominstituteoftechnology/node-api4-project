@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use("/api/*",(_,res) =>{
-    res.json({data: "The api lives!!"})
+    res.json({data: "The api lives, it lives I tell you!!"})
 })
 
 app.listen(port, () =>{
