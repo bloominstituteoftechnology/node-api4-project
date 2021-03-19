@@ -4,9 +4,11 @@ const cors = require("cors")
 
 const app = express()
 const port = process.env.PORT || 9000
+const path = require("path")
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.join(__dirname,"cient/build","index.html")) )
 
 app.use("/api/*",(_,res) =>{
     res.json({data: "The api lives, it lives I tell you!!"})
