@@ -1,26 +1,24 @@
+console.log('it is working')
 const express = require('express')
-const path = require('path')
+
 const server = express()
 
-const port = process.env.PORT || 9000
+const path = require('path')
+
+const port = process.env.PORT || 5000
 
 server.use(express.static(path.join(__dirname, 'client/build')))
 
 server.use(express.json())
 
-server.get('/api/*', (req,res)=>{
-    res.json({message: 'api is working'})
-})
-
-server.use('*', (req,res)=>{
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-})
-
-server.use((err, req, res, next) =>{
-    res.status(500).json({
-        message:err.message,
-        stack: err.stack
+server.get('/api/*', (req, res)=>{
+    res.json({
+        cohort:'web 41'
     })
+})
+
+server.use('*', (req,res) =>{
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 server.listen(port, ()=>{
