@@ -1,11 +1,12 @@
 const express = require('express')
 const path = require('path')
 const server = express()
+const cors = require('cors')
 
 const port = process.env.PORT || 9000
 
 server.use(express.static(path.join(__dirname, 'client/build')))
-
+server.use(cors())
 server.use(express.json())
 
 server.get('/api/*', (req,res)=>{
