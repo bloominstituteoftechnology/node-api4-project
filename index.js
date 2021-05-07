@@ -1,19 +1,19 @@
-require('dotenv').config()
-console.log(process.env.PORT, process.env.NODE_ENV)
 const express = require('express')
-const cors = require('cors')
-
+const path = require('path')
 const server = express()
 
 const port = process.env.PORT || 9000
-server.use(express.json())
-server.use(cors())
 
-server.get('/api/hello', (req,res)=>{
+server.use(express.static(path.join(__dirname, 'client/build')))
+
+server.use(express.json())
+
+server.get('/api/*', (req,res)=>{
     res.json({message: 'api is working'})
 })
-server.use('*', (req,res,next)=>{
-    res.send("<h1>this work</h1>")
+
+server.use('*', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 server.use((err, req, res, next) =>{
