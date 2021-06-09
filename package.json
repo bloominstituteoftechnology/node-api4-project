@@ -1,0 +1,20 @@
+{
+  "name": "api4-project",
+  "version": "1.0.0",
+  "description": "In this challenge, you will **deploy** an API of your choosing to Heroku.",
+  "main": "dynamicPortOnServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qirhi/node-api4-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qirhi/node-api4-project/issues"
+  },
+  "homepage": "https://github.com/Qirhi/node-api4-project#readme"
+}
