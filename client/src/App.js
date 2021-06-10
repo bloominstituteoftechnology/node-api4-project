@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 function url(path){
   // this is a build in env var that tells  you where it is NODE_ENV
-  return process.env.NODE_ENV = "development" ? `http://localhost:1234${path}` : path
+  return process.env.NODE_ENV === "development" ? `http://localhost:1234${path}` : path
 }
 
 function App() {
