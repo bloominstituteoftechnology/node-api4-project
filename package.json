@@ -4,7 +4,7 @@
   "description": "In this challenge, you will **deploy** an API of your choosing to Heroku.",
   "main": "dynamicPortOnServer.js",
   "scripts": {
-    "start": "noe index.js",
+    "start": "node index.js",
     "server": "nodemon index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
