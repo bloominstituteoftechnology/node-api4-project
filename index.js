@@ -29,4 +29,4 @@ console.log(__dirname)
 console.log(__filename)
 console.log(process.env.USER)
 console.log(process.env.PORT)
-console.log(dotenv)
+console.log(dotenv)//
