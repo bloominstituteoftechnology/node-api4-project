@@ -15,4 +15,26 @@ router.get("/", (req, res, next) => {
     .catch((err) => next(err));
 });
 
+//GET /api/users/:id
+router.get("/:id", (req, res, next) => {
+  const { id } = req.params;
+  Users.getById(id)
+    .then((user) => {
+      console.log("user---id--->", user);
+      res.status(200).json(user);
+    })
+    .catch((err) => next(err));
+});
+
+//GET /api/users/:id/comments
+router.get("/:id/comments", (req, res, next) => {
+  const { id } = req.params;
+  Users.getUserComments(id)
+    .then((comment) => {
+      console.log("comment---->", comment);
+      res.status(200).json(comment);
+    })
+    .catch((err) => next(err));
+});
+
 module.exports = router;
