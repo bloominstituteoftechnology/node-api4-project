@@ -9,6 +9,7 @@ const server = express();
 //import routers
 const welcomeRouter = require("../welcome/welcome-router");
 const usersRouter = require("../users/users-router");
+const commentsRouter = require("../comments/comments-router");
 
 //Global middleware
 server.use(helmet());
@@ -19,6 +20,8 @@ server.use(express.json());
 server.use("/", welcomeRouter);
 // --> /api/users
 server.use("/api/users", usersRouter);
+// --> /api/comments
+server.use("/api/comments", commentsRouter);
 
 //middleware for CATCH ERROR on all endpoints of /api/messages
 server.use((err, req, res, next) => {

@@ -5,6 +5,10 @@ exports.seed = function (knex, Promise) {
       comment: "this is comment for first user",
     },
     {
+      user_id: 1,
+      comment: "this is the 3rd comment for first user",
+    },
+    {
       user_id: 2,
       comment: "this is comment for second user",
     },
