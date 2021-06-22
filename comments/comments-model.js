@@ -4,6 +4,8 @@ module.exports = {
   getComments,
   getById,
   postComment,
+  deleteComment,
+  updateComment,
 };
 
 //USERS C.R.U.D
@@ -26,5 +28,21 @@ function postComment(commentBody) {
       //ids makes sure we targe the selected ID posts only
       console.log(ids);
       return db("comments").where({ id: ids }).first();
+    });
+}
+
+//DELETE /api/comments/:id
+function deleteComment(id) {
+  return db("comments").where({ id }).del();
+}
+
+//UPDATE PUT /api/comments/:id
+function updateComment(id, changes) {
+  return db("comments")
+    .update(changes)
+    .where({ id })
+    .then((ids) => {
+      console.log("ids---update--->", ids);
+      return db("comments").where({ id: id }).first();
     });
 }
