@@ -36,10 +36,15 @@ router.get("/:id/comments", checkUserID(), (req, res, next) => {
 //POST /api/users/
 router.post("/", userPostValidation(), (req, res, next) => {
   const body = req.body;
-
+  // const { name, age, location } = req.body;
+  // if (!name || !age || !location) {
+  //   res.json({ message: "please check your properties" });
+  // }
   Users.addUser(body)
     .then((user) => {
-      res.status(201).json(user);
+      user
+        ? res.status(201).json(user)
+        : res.status(404).json({ error: `no user found` });
     })
     .catch((err) => next(err));
 });
