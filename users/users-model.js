@@ -4,6 +4,7 @@ module.exports = {
   getUsers,
   getById,
   getUserComments,
+  addUser,
 };
 
 //USERS C.R.U.D
@@ -23,4 +24,14 @@ function getUserComments(userId) {
     .join("comments", "comments.user_id", "=", "users.id")
     .select("users.*", "comments.comment", "comments.user_id")
     .where("comments.user_id", userId);
+}
+
+//POST /api/users
+function addUser(user) {
+  return db("users")
+    .insert(user, "ids")
+    .then((ids) => {
+      return db("users").where({ id: ids }).first();
+      //ids returns a single post not in an array
+    });
 }

@@ -1,4 +1,4 @@
-const Comments = require("../comments/comments-model");
+const Comments = require("./comments-model");
 
 module.exports = {
   checkCommentID,

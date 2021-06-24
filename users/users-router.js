@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Users = require("./users-model");
+const { checkUserID, userPostValidation } = require("./users-middleware");
 
 // getUsers, getUserById, updateUser, deleteUser, ||||| addUser, findBy,
 
@@ -16,23 +17,29 @@ router.get("/", (req, res, next) => {
 });
 
 //GET /api/users/:id
-router.get("/:id", (req, res, next) => {
-  const { id } = req.params;
-  Users.getById(id)
-    .then((user) => {
-      console.log("user---id--->", user);
-      res.status(200).json(user);
-    })
-    .catch((err) => next(err));
+//middleware to get the ID
+router.get("/:id", checkUserID(), (req, res, next) => {
+  res.status(200).json(req.userID);
 });
 
 //GET /api/users/:id/comments
-router.get("/:id/comments", (req, res, next) => {
+router.get("/:id/comments", checkUserID(), (req, res, next) => {
   const { id } = req.params;
   Users.getUserComments(id)
     .then((comment) => {
       console.log("comment---->", comment);
       res.status(200).json(comment);
+    })
+    .catch((err) => next(err));
+});
+
+//POST /api/users/
+router.post("/", userPostValidation(), (req, res, next) => {
+  const body = req.body;
+
+  Users.addUser(body)
+    .then((user) => {
+      res.status(201).json(user);
     })
     .catch((err) => next(err));
 });
