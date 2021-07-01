@@ -24,10 +24,10 @@ function checkUserID() {
 
 //check user post
 function userPostValidation() {
-  return async (req, res, next) => {
-    const body = req.body;
-    if (!body.name || !body.age || !body.location) {
-      res.status(418).json({ message: "please check your properties" });
+  return (req, res, next) => {
+    const { name, age, location } = req.body;
+    if (!name || !age || !location) {
+      return res.status(418).json({ message: "please check your properties" });
     }
     next();
   };
