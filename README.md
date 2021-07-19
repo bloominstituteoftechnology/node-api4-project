@@ -1,6 +1,6 @@
 # Deployment and Best Practices
 
-In this challenge, you will **deploy** an API to Heroku.
+In this challenge, you will build a simple Express app and deploy it to Heroku.
 
 ## Instructions
 
