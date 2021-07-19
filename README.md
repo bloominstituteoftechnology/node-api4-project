@@ -34,6 +34,6 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
 
 ### Stretch Yourself
 
-- Research how to avoid storing passwords in plain text in your array database.
+- Research how to avoid storing passwords as is in your array database.
 - Research how to grant access to `GET /api/users` only those clients that are registered and logged in.
 - Create a front-end piece inside the project containing a register/login form and the means to display users.
