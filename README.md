@@ -8,21 +8,23 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
 
 ### Task 1: Minimum Viable Product
 
-- [ ] Build a simple API and deploy it to [Heroku](https://heroku.com):
+- [ ] Build a simple API:
 
-  1. Create a `.gitignore` file executing `npx gitignore node`
-  2. Create a `package.json` file executing `npm init --y`
-  3. Add Eslint to the project executing `npx eslint --init`
-  4. Edit the `package.json` file to add `"start"` and `"server"` scripts
-  5. Install `express`, `dotenv`, `cors`
-  6. Add support for environment variables using an `.env` file and the dotenv library
-  7. Flesh out the API:
+  - Create a `.gitignore` file executing `npx gitignore node`
+  - Create a `package.json` file executing `npm init --y`
+  - Add Eslint to the project executing `npx eslint --init`
+  - Edit the `package.json` file to add `"start"` and `"server"` scripts
+  - Install `express`, `dotenv`, `cors`
+  - Add support for environment variables using an `.env` file and the dotenv library
+  - Flesh out the API:
 
     | Method | URL           | Description                                                                                         |
     | ------ | ------------- | ----------------------------------------------------------------------------------------------      |
     | GET    | /api/users    | Returns an array users.                                                                             |
     | POST   | /api/register | Creates a user from { username, password } in the `request body`, responds with newly created user. |
     | POST   | /api/login    | Checks { username, password } in the `request body`, responds with a welcome message.               |
+
+- [ ] Deploy your app to [Heroku](https://heroku.com).
 
 ### Important Notes
 
