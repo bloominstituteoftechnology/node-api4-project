@@ -26,7 +26,7 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
 
 ### Important Notes
 
-- You can make your API totally dumb (hardcoded responses for all requests).
+- You can make the API totally dumb and use hardcoded responses for the requests from clients.
 - Alternatively you can use an in-memory array to persist users and act as a database, and build database helpers that interact with the users array.
 - If you persist users in an array database, know that storing passwords in plain text is a very bad practice from a security standpoint.
 
