@@ -8,12 +8,12 @@ server.use(cors())
 
 server.get('/', (req, res) => {
     res.send(`
-        <h1>Web 44 is great!</h1>
+        <h1>Welcome to my api!</h1>
     `)
 })
 
 server.use('*', (req, res) =>{
-    res.json({message: 'web 44 is awesome indeed!'})
+    res.json({message: 'Something aint right about what you just asked for...'})
 })
 
 module.exports=server;
