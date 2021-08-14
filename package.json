@@ -1,0 +1,23 @@
+{
+  "name": "tdubs-node-api4-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tdubs42/node-api4-project.git",
+  "author": "tdubs42 <contact-tdubs@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "heroku-postbuild": "cd client && yarn install && yarn build"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
+}
