@@ -15,7 +15,7 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
   - Add Eslint to the project executing `npx eslint --init`
   - Edit the `package.json` file to add `"start"` and `"server"` scripts
   - Install `express`, `dotenv`, `cors`
-  - Add support for environment variables using an `.env` file and the dotenv library
+  - Add support for environment variables using an `.env` file and the dotenv library, providing fallbacks in the code
   - Flesh out the API:
 
     | Method | URL           | Description                                                                                         |
@@ -24,7 +24,7 @@ You are allowed, and **encouraged**, to collaborate with other peers. Please fol
     | POST   | /api/register | Creates a user from { username, password } in the `request body`, responds with newly created user. |
     | POST   | /api/login    | Checks { username, password } in the `request body`, responds with a welcome message.               |
 
-- [ ] Deploy your app to [Heroku](https://heroku.com).
+- [ ] Deploy your app to [Heroku](https://heroku.com). The link to the deployed API is your submission deliverable
 
 ### Important Notes
 
