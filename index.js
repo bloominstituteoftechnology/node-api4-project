@@ -23,14 +23,6 @@ server.get('/api/users', (req, res)=>{
     res.json(users)
 })
 
-server.post('/api/register', async (req, res)=>{
-    const newUser = req.body
-    await res.json(newUser)
-})
-
-server.post('/api/login', (req, res)=>{
-
-})
 
 server.use("*", (req, res, next) => {
     res.status(404).json({ message: `${req.method} ${req.baseUrl} not found!!` });
