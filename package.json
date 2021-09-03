@@ -1,0 +1,20 @@
+{
+  "name": "api4-project",
+  "version": "1.0.0",
+  "description": "In this challenge, you will build a simple Express app and deploy it to Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanna-rodriguez/node-api4-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johanna-rodriguez/node-api4-project/issues"
+  },
+  "homepage": "https://github.com/johanna-rodriguez/node-api4-project#readme"
+}
