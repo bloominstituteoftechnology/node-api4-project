@@ -4,6 +4,8 @@
   "description": "In this challenge, you will build a simple Express app and deploy it to Heroku.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/johanna-rodriguez/node-api4-project/issues"
   },
-  "homepage": "https://github.com/johanna-rodriguez/node-api4-project#readme"
+  "homepage": "https://github.com/johanna-rodriguez/node-api4-project#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
 }
