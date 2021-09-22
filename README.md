@@ -4,9 +4,14 @@ In this challenge, you will build a simple Express app and deploy it to Heroku.
 
 ## Instructions
 
-You are allowed, and **encouraged**, to collaborate with other peers. Please follow the twenty-minute rule, before seeking support.
+### Task 1: Project Setup
 
-### Task 1: Minimum Viable Product
+- [ ] Fork and clone the repository.
+- [ ] Implement your project in a `firstname-lastname` branch.
+- [ ] Create a pull request of `firstname-lastname` against your `main` branch.
+- [ ] Open the assignment in Canvas and submit your pull request.
+
+### Task 2: Minimum Viable Product
 
 - [ ] Build a simple API:
 
