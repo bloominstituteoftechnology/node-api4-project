@@ -8,9 +8,9 @@ server.use(helmet())
 server.use(express.json())
 server.use(morgan('dev'))
 
-// server.get('/', (req, res) => {
-//     res.send(`<h2>IT'S ALIVE!!!!</h2>`);
-//   });
+server.get('/', (req, res) => {
+    res.send(`<h2>IT'S ALIVE!!!!</h2>`);
+  });
 
   const users = [
       {
