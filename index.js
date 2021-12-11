@@ -5,12 +5,6 @@ const cors = require("cors")
 
 server.use(cors())
 
-
-server.use("/api/", (_, res) => {
-	res.json({data: "Hello world!"})
-
-})
-
 server.listen(port, () => {
 	console.log(`Server is running on port ${port}`)
 })
