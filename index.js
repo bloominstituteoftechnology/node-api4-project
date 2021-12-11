@@ -1,8 +1,17 @@
 const dotenv = require("dotenv").config()
 const express = require("express")
-const app = express()
+const server = express()
 const port = process.env.PORT || 9000
 
+server.use("/api/", (_, res) => {
+	res.json({
+		data: "Hello world!"
+	})
+})
+
+server.listen(port, () => {
+	console.log(`Server is running on ${port}`)
+})
 
 // console.log("Server is live")
 // console.log(__dirname)
