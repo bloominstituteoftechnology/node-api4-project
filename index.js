@@ -1,11 +1,10 @@
 const dotenv = require("dotenv").config()
-const express = require("express")
-const server = express()
+const server = require("./api/server")
 const port = process.env.PORT || 9000
 const cors = require("cors")
 
 server.use(cors())
-server.use(express.json())
+
 
 server.use("/api/", (_, res) => {
 	res.json({data: "Hello world!"})
@@ -13,7 +12,7 @@ server.use("/api/", (_, res) => {
 })
 
 server.listen(port, () => {
-	console.log(`Server is running on ${port}`)
+	console.log(`Server is running on port ${port}`)
 })
 
 // console.log("Server is live")
