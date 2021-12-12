@@ -1,22 +1,7 @@
+const server = require('./api/server.js')
 const dotenv = require('dotenv').config()
-const express = require('express')
-const app = express()
-const cors = require('cors')
-const path = require('path')
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 1234
 
-app.use(cors())
-app.use(express.json())
-app.use(express.static(path.join(__dirname, 'client/build')))
-
-app.use('/api/*', (_, res) => {
-    res.json({data: ''})
-})
-
-app.listen(port, () => {
-    console.log(`Server is on port ${port}`)
-})
-
-app.use('*', (_, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+server.listen(port, () => {
+    console.log(`Server listening on port ${port}`)
 })
