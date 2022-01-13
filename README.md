@@ -30,7 +30,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
 
 ### Important Notes
 
-- You can make the API totally dumb and use hardcoded responses for the requests from clients.
+- You can make the API return totally hardcoded responses for the requests from clients (no database).
 - Alternatively you can use an in-memory array to persist users and act as a database, and build database helpers that interact with the users array.
 - If you persist users in an array database, know that storing passwords in plain text is a very bad practice from a security standpoint.
 
