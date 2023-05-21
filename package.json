@@ -1,0 +1,32 @@
+{
+  "name": "api4-project",
+  "version": "1.0.0",
+  "description": "In this challenge, you will build a simple Express app that is _deployable_ to Heroku. This means that it has a proper `start` script in the `package.json` file, and that the port number is taken from the environment instead of it being hard-coded. Feel free to deploy your app to Heroku, but bear in mind that this is not a free service anymore.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SydneyHopson/node-api4-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SydneyHopson/node-api4-project/issues"
+  },
+  "homepage": "https://github.com/SydneyHopson/node-api4-project#readme",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
+  }
+}
